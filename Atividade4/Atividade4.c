@@ -19,12 +19,41 @@ struct no {
  
 // Questao 1
 void insereInicio (No **pLista, int n) {
+no *aux=(no*)malloc(sizeof(no));
 
+aux->chave=n;
+
+aux->prox=(*pLista);
+
+(*plista)=aux;
 }
 
 // Questao 2
 void insereFim (No **pLista, int n) {
+  no *aux= *plista;
   
+no *novo=(no*)malloc(sizeof(no));
+
+novo->chave=n;
+
+novo->prox=NULL;
+
+if(aux==NULL){
+*plista=novo;
+}
+
+else{
+
+while(aux->!=NULL){
+aux=aux->prox;
+aux->prox=novo;
+
+}
+
+}
+
+}
+
 }
 
 // Questao 3
